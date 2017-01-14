@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
 
+export class Hero {
+  id: number;
+  name: string;
+}
+
 @Component({
   selector: 'my-app',
   template: `
@@ -7,6 +12,7 @@ import { Component } from '@angular/core';
     <h2>{{hero}} details!
   `,
 })
+
 export class AppComponent  { 
   title = 'Tour of Heros'; 
   hero  = 'Windstorm';
