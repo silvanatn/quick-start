@@ -13,7 +13,7 @@ export class Hero {
     <div><label>id: </label>{{hero.id}}</div>
     <div>
       <label>name: </label>
-      <input value="{{hero.name}}" palceholder="name">
+      <input [(ngModel)]="hero.name" palceholder="name">
     </div>
   `,
 })
