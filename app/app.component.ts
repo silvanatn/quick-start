@@ -9,11 +9,15 @@ export class Hero {
   selector: 'my-app',
   template: `
     <h1>{{title}}</h1>
-    <h2>{{hero}} details!
+    <h2>{{hero.name}} details!
   `,
 })
 
-export class AppComponent  { 
+export class AppComponent  {
+  hero: Hero = {
+    id: 1,
+    name: 'Windstorm'
+  } 
   title = 'Tour of Heros'; 
-  hero  = 'Windstorm';
+  //hero  = 'Windstorm';
 }
