@@ -9,6 +9,13 @@ import { HeroesComponent } from './heroes.component';
 
 import { HeroService } from './hero.service';
 
+RouterModule.forRoot([
+  {
+    path: 'heroes',
+    component: HeroesComponent
+  }
+])
+
 @NgModule({
   imports:      [ 
     BrowserModule,
