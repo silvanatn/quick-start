@@ -1,27 +1,26 @@
-import { NgModule }      from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
-import { AppComponent }  from './app.component';
+import { AppComponent } from './app.component';
 import { HeroDetailComponent } from './hero-detail.component';
 import { HeroesComponent } from './heroes.component';
 
 import { HeroService } from './hero.service';
 
-RouterModule.forRoot([
-  {
-    path: 'heroes',
-    component: HeroesComponent
-  }
-])
-
 @NgModule({
-  imports:      [ 
+  imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot([
+      {
+        path: 'heroes',
+        component: HeroesComponent
+      }
+    ])
   ],
-  declarations: [ 
+  declarations: [
     AppComponent,
     HeroDetailComponent,
     HeroesComponent
@@ -29,6 +28,6 @@ RouterModule.forRoot([
   providers: [
     HeroService
   ],
-  bootstrap: [ AppComponent ]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
